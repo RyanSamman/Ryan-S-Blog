@@ -1,5 +1,5 @@
 ---
-title: New Beginnings
+title: Markdown Syntax
 date: "2015-05-28T22:40:32.169Z"
 description: This is a custom description for SEO and Open Graph purposes, rather than the default generated excerpt. Simply add a description field to the frontmatter.
 ---
@@ -106,3 +106,23 @@ to its own, safe country. But nothing the copy said could convince her and so it
 didn’t take long until a few insidious Copy Writers ambushed her, made her drunk
 with Longe and Parole and dragged her into their agency, where they abused her
 for their projects again and again.
+
+```javascript
+
+const x = 5;
+
+```
+```css
+
+body {
+  testing: abc;
+}
+
+```
+```python
+
+x = 5
+for i in range(50):
+  i += 1
+
+```

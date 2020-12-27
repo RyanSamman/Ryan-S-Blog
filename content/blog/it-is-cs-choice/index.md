@@ -4,8 +4,6 @@ date: "2020-12-27T22:40:32.169Z"
 description: To Be Done.
 ---
 
-This will eventually go on my own website, but I have placed it here for now.
-
 The big question many students are facing at the moment is, **what major should I choose?** 
 
 Therefore, I created this post to clear up some misconceptions, and hopefully give students a better idea on their potential choices.
