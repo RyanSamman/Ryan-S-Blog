@@ -1,14 +1,15 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Ryan Samman`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Ryan Samman`,
+      summary: `studying Computer Science at the Faculty of Computing and Information Technology.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
+    description: `Ryan Samman's Personal Blog! I talk about how I've learnt `,
+    siteUrl: `https://ryan-samman.vercel.app/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `Ryan_Samman_`,
+      github: `RyanSamman`,
     },
   },
   plugins: [
