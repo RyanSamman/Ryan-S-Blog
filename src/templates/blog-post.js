@@ -19,6 +19,8 @@ const BlogPostTemplate = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
+      {/* <pre>{JSON.parse(data, null, 2)}</pre> */}
+      {/* {post.id} */}
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
@@ -30,7 +32,9 @@ const BlogPostTemplate = ({ data, location }) => {
       >
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.date}</p>
+          <p>
+            {post.frontmatter.date} - {post.fields.readingTime.text}
+          </p>
         </header>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
@@ -93,6 +97,11 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+      }
+      fields {
+        readingTime {
+          text
+        }
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {

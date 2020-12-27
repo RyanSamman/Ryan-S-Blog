@@ -61,7 +61,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Ryan Samman's Blog`,
+        name: `Ryan Samman`,
         short_name: `Blog`,
         start_url: `/`,
         background_color: `#ffffff`,
@@ -71,6 +71,15 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          `gatsby-remark-reading-time`,
+          // ...
+        ],
+      },
+    },
     {
       resolve: "gatsby-plugin-react-svg",
       options: {
