@@ -9,10 +9,11 @@ import SEO from "../components/seo"
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
+  const siteURL = data.site.siteMetadata?.siteURL + data.frontmatter.fields.slug
   const { previous, next } = data
 
   const disqusConfig = {
-    url: `${window.location.href}`,
+    url: `${siteURL}`,
     identifier: post.id,
     title: siteTitle,
   }
@@ -87,6 +88,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        siteUrl
       }
     }
     markdownRemark(id: { eq: $id }) {
