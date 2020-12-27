@@ -9,7 +9,7 @@ import SEO from "../components/seo"
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  const siteURL = data.site.siteMetadata?.siteURL + data.frontmatter.fields.slug
+  const siteURL = data.site.siteMetadata.siteUrl + post.fields.slug
   const { previous, next } = data
 
   const disqusConfig = {
@@ -20,8 +20,6 @@ const BlogPostTemplate = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      {/* <pre>{JSON.parse(data, null, 2)}</pre> */}
-      {/* {post.id} */}
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
@@ -101,6 +99,7 @@ export const pageQuery = graphql`
         description
       }
       fields {
+        slug
         readingTime {
           text
         }
