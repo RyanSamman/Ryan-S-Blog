@@ -67,6 +67,7 @@ const BlogPostTemplate = ({ data, location }) => {
           </li>
         </ul>
       </nav>
+      <Disqus config={disqusConfig} />
     </Layout>
   )
 }
