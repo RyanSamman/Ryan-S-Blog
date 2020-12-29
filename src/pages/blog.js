@@ -1,5 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import { TwitterTweetEmbed } from "react-twitter-embed"
+import Skeleton from "react-loading-skeleton"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -13,6 +15,7 @@ const BlogIndex = ({ data, location }) => {
     <>
       <Layout location={location} title={siteTitle}>
         <SEO title="My Blog Posts" />
+        <h1 className="mt-0">My Blog Posts</h1>
         <ol style={{ listStyle: `none` }}>
           {posts.map(post => {
             const title = post.frontmatter.title || post.fields.slug
@@ -45,6 +48,13 @@ const BlogIndex = ({ data, location }) => {
             )
           })}
         </ol>
+        <h3>I have more blog posts on the way!</h3>
+        <center>
+          <TwitterTweetEmbed
+            tweetId="1335155439122718726"
+            placeholder={<Skeleton height={500} />}
+          />
+        </center>
         <Bio />
       </Layout>
     </>
