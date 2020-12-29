@@ -24,6 +24,10 @@ body {
   text-shadow: 0 0 10px #fff, 0 0 20px #fff;
 }
 
+.glow a:hover {
+  text-shadow: 0 0 7px #fff;
+}
+
 .brandIcon a {
   text-decoration: none;
 }
