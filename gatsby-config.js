@@ -62,10 +62,10 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Ryan Samman`,
-        short_name: `Blog`,
+        short_name: `Ryan's Blog`,
         start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#663399`,
+        background_color: `#003087`,
+        theme_color: `#009CDE`,
         display: `minimal-ui`,
         icon: `content/assets/icon.png`,
       },
