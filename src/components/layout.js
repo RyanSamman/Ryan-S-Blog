@@ -13,8 +13,12 @@ const Layout = ({ children }) => {
         <NavBar />
       </header>
       <div
-        className="global-wrapper border-black border-4 rounded-md shadow-inner"
-        style={{ marginBottom: -50, backgroundColor: "rgba(255,255,255,0.98)" }}
+        className="global-wrapper rounded-2xl shadow-inner"
+        style={{
+          marginBottom: -50,
+          backgroundColor: "rgba(255,255,255,0.98)",
+          border: "4px solid #000",
+        }}
       >
         <main>{children}</main>
       </div>
