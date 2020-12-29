@@ -36,13 +36,13 @@ const Bio = () => {
   `)
 
   // Set these values by editing "siteMetadata" in gatsby-config.js
-  const author = data.site.siteMetadata?.author
+  // const author = data.site.siteMetadata?.author
   const social = data.site.siteMetadata?.social
 
-  const avatar = data?.avatar?.childImageSharp?.fixed
+  // const avatar = data?.avatar?.childImageSharp?.fixed
 
   return (
-    <figure class="md:flex bg-gray-100 justify-items-center rounded-xl p-8 md:p-0">
+    <div class="md:flex bg-gray-100 justify-items-center rounded-xl p-8 md:p-0">
       <div className="md:my-auto">
         <img
           class="block w-32 h-32 rounded-full mx-auto md:mx-2"
@@ -74,7 +74,7 @@ const Bio = () => {
           <div class="text-gray-500">Computer Science Student, FCIT</div>
         </figcaption>
       </div>
-    </figure>
+    </div>
   )
 }
 
