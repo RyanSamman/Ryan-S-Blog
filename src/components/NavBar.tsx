@@ -18,11 +18,11 @@ const NavBar: React.FC = () => (
 	<div className="mx-auto mt-3 flex justify-between text-white px-5 md:px-10" style={{ width:"100%", maxWidth: "var(--maxWidth-wrapper)" }} >
 
 		<div className="brandIcon">
-		<Link to="/blog"><div className="rounded-2xl stickout" style={brandIconStyle}>Ryan Samman</div></Link>
+		<Link to="/"><div className="rounded-2xl stickout" style={brandIconStyle}>Ryan Samman</div></Link>
 		</div>
 		<div className="flex justify-items-end ">
 			<p className="px-2 md:px-4 navbarText">
-				<Link className="" to="/blog">Blog</Link>
+				<Link to="/blog">Blog</Link>
 
 			</p>
 			<p className="px-2 md:px-4 navbarText">
