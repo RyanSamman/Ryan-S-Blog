@@ -96,13 +96,6 @@ module.exports = {
     },
     `gatsby-plugin-postcss`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
-    {
-      resolve: "gatsby-plugin-offline",
-      options: {
-        workboxConfig: {
-          globPatterns: [`content/assets/icon.png`],
-        },
-      },
-    },
+    "gatsby-plugin-offline",
   ],
 }
