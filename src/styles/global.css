@@ -10,3 +10,30 @@ body {
 /* @tailwind base; */
 @tailwind components;
 @tailwind utilities;
+
+.navbarText a {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 4px;
+  font-weight: 500;
+  font-size: large;
+}
+
+.navbarText a:hover {
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff;
+}
+
+.brandIcon a {
+  text-decoration: none;
+}
+
+.stickout {
+  position: relative;
+  top: -40px;
+}
+
+.stickout:hover {
+  top: -30px;
+  transition: top 0.1s cubic-bezier(0.74, 0.28, 1, 0.13);
+}
