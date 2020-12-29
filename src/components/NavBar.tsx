@@ -28,9 +28,9 @@ const NavBar: React.FC = () => (
 			<p className="px-2 md:px-4 navbarText">
 				<Link className="" to="https://twitter.com/Ryan_Samman_">Projects</Link>
 			</p>
-			<p className="px-2 md:px-4 navbarText">
+			{/* <p className="px-2 md:px-4 navbarText">
 				<Link className="" to="https://twitter.com/Ryan_Samman_">Contact</Link>
-			</p>
+			</p> */}
 		</div>
 	</div>
 )
