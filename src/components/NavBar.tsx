@@ -26,7 +26,7 @@ const NavBar: React.FC = () => (
 
 			</p>
 			<p className="px-2 md:px-4 navbarText">
-				<Link className="" to="https://twitter.com/Ryan_Samman_">Projects</Link>
+				<Link className="" to="https://github.com/RyanSamman">Projects</Link>
 			</p>
 			{/* <p className="px-2 md:px-4 navbarText">
 				<Link className="" to="https://twitter.com/Ryan_Samman_">Contact</Link>
