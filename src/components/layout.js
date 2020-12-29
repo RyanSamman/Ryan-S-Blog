@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <TopWave />
-      <header className="mb-10">
+      <header>
         <NavBar />
       </header>
       <div
