@@ -64,7 +64,7 @@ module.exports = {
         name: `Ryan Samman`,
         short_name: `Ryan's Blog`,
         start_url: `/`,
-        background_color: `#003087`,
+        background_color: `#00457C`,
         theme_color: `#009CDE`,
         display: `minimal-ui`,
         icon: `content/assets/icon.png`,
