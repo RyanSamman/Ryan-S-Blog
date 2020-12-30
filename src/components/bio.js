@@ -65,9 +65,10 @@ const Bio = () => {
       </div>
       <div class="pt-6 md:p-8 text-center md:text-left space-y-4">
         <p class="text-lg font-semibold">
-          Passionate about Tech and Programming. I'm a novice programmer who
-          started out one year ago, and I created this blog to write about
-          interesting things!
+          Currently a freshman student in FCIT, I created this blog to document
+          my programming journey and the projects I create. My strengths are in
+          Python and Javascript, however, I plan on diving deeper into Computer
+          Science in the coming years.
         </p>
         <figcaption class="font-medium">
           <div class="text-cyan-600">Ryan Samman</div>
