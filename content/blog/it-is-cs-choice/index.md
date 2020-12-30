@@ -1,7 +1,7 @@
 ---
-title: What to Choose - IT, IS, or CS?
+title: 💻 What to Choose - IT, IS, or CS?
 date: "2020-12-27T22:40:32.169Z"
-description: To Be Done.
+description: Many students are conflicted on what major to choose, but does it matter? Read more to find out.
 ---
 
 The big question many students are facing at the moment is, **what major should I choose?** 
