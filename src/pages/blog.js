@@ -48,7 +48,7 @@ const BlogIndex = ({ data, location }) => {
             )
           })}
         </ol>
-        <h3>I have more blog posts on the way!</h3>
+        <h4>More blog posts planned in the future!</h4>
         <center>
           <TwitterTweetEmbed
             tweetId="1335155439122718726"
