@@ -19,10 +19,14 @@ const BlogIndex = () => {
             <Link to="/blog">Blog</Link>
           </h1>
           <h1 className="text-white glow">
-            <Link to="https://github.com/RyanSamman">Projects</Link>
+            <Link target="_blank" to="https://github.com/RyanSamman">
+              Projects
+            </Link>
           </h1>
           <h1 className="text-white glow">
-            <Link to="https://twitter.com/Ryan_Samman_">Contact</Link>
+            <Link target="_blank" to="https://twitter.com/Ryan_Samman_">
+              Contact
+            </Link>
           </h1>
         </center>
       </div>
