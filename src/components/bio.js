@@ -54,11 +54,14 @@ const Bio = () => {
         <div className="flex justify-center mt-4">
           <a
             href={`https://twitter.com/${social?.twitter || ``}`}
-            className="mr-1"
+            className="mr-2"
           >
             <TwitterIcon />
           </a>
-          <a href={`https://github.com/${social?.github || ``}`}>
+          <a
+            href={`https://github.com/${social?.github || ``}`}
+            className="ml-2"
+          >
             <GitHubIcon />
           </a>
         </div>
