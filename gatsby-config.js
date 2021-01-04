@@ -28,9 +28,13 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: `gatsby-plugin-mdx`,
       options: {
-        plugins: [
+        extentions: [`.mdx`, `.md`],
+        defaultLayouts: {
+          blog: require.resolve("./src/templates/blog-post.js"),
+        },
+        gatsbyRemarkPlugins: [
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -38,17 +42,18 @@ module.exports = {
             },
           },
           {
-            resolve: `gatsby-remark-responsive-iframe`,
+            resolve: `gatsby-remark-responsive-frame`,
             options: {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-          `gatsby-remark-prismjs`,
-          `gatsby-remark-copy-linked-files`,
-          `gatsby-remark-smartypants`,
+          { resolve: `gatsby-remark-prismjs` },
+          { resolve: `gatsby-remark-copy-linked-files` },
+          { resolve: `gatsby-remark-smartypants` },
         ],
       },
     },
+    `gatsby-remark-reading-time`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -71,15 +76,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          `gatsby-remark-reading-time`,
-          // ...
-        ],
-      },
-    },
     {
       resolve: "gatsby-plugin-react-svg",
       options: {

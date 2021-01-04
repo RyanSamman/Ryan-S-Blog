@@ -9,7 +9,7 @@ import SEO from "../components/seo"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  const posts = data.allMarkdownRemark.nodes
+  const posts = data.allMdx.nodes
 
   return (
     <>
@@ -18,10 +18,10 @@ const BlogIndex = ({ data, location }) => {
         <h1 className="mt-0">My Blog Posts</h1>
         <ol style={{ listStyle: `none` }}>
           {posts.map(post => {
-            const title = post.frontmatter.title || post.fields.slug
+            const title = post.frontmatter.title || post.slug
 
             return (
-              <li key={post.fields.slug}>
+              <li key={post.slug}>
                 <article
                   className="post-list-item"
                   itemScope
@@ -29,7 +29,7 @@ const BlogIndex = ({ data, location }) => {
                 >
                   <header>
                     <h2>
-                      <Link to={post.fields.slug} itemProp="url">
+                      <Link to={post.slug} itemProp="url">
                         <span itemProp="headline">{title}</span>
                       </Link>
                     </h2>
@@ -70,12 +70,10 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
       nodes {
         excerpt
-        fields {
-          slug
-        }
+        slug
         frontmatter {
           date(formatString: "MMMM DD, YYYY")
           title

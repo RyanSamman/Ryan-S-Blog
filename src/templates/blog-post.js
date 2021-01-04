@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import { MDXRenderer } from "gatsby-plugin-mdx"
 
 import { Disqus } from "gatsby-plugin-disqus"
 import Bio from "../components/bio"
@@ -7,9 +8,9 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const BlogPostTemplate = ({ data, location }) => {
-  const post = data.markdownRemark
+  const post = data.mdx
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  const siteURL = data.site.siteMetadata.siteUrl + post.fields.slug
+  const siteURL = data.site.siteMetadata.siteUrl + post.slug
   const { previous, next } = data
 
   const disqusConfig = {
@@ -35,10 +36,7 @@ const BlogPostTemplate = ({ data, location }) => {
             {post.frontmatter.date} - {post.fields.readingTime.text}
           </p>
         </header>
-        <section
-          dangerouslySetInnerHTML={{ __html: post.html }}
-          itemProp="articleBody"
-        />
+        <MDXRenderer>{post.body}</MDXRenderer>
         <hr />
         <footer>
           <Bio />
@@ -56,14 +54,14 @@ const BlogPostTemplate = ({ data, location }) => {
         >
           <li>
             {previous && (
-              <Link to={previous.fields.slug} rel="prev">
+              <Link to={previous.slug} rel="prev">
                 ← {previous.frontmatter.title}
               </Link>
             )}
           </li>
           <li>
             {next && (
-              <Link to={next.fields.slug} rel="next">
+              <Link to={next.slug} rel="next">
                 {next.frontmatter.title} →
               </Link>
             )}
@@ -89,34 +87,30 @@ export const pageQuery = graphql`
         siteUrl
       }
     }
-    markdownRemark(id: { eq: $id }) {
+    mdx(id: { eq: $id }) {
       id
       excerpt(pruneLength: 160)
-      html
+      body
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
         description
       }
+      slug
       fields {
-        slug
         readingTime {
           text
         }
       }
     }
-    previous: markdownRemark(id: { eq: $previousPostId }) {
-      fields {
-        slug
-      }
+    previous: mdx(id: { eq: $previousPostId }) {
+      slug
       frontmatter {
         title
       }
     }
-    next: markdownRemark(id: { eq: $nextPostId }) {
-      fields {
-        slug
-      }
+    next: mdx(id: { eq: $nextPostId }) {
+      slug
       frontmatter {
         title
       }
