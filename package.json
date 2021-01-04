@@ -33,8 +33,10 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
+    "react-katex": "^2.0.2",
     "react-loading-skeleton": "^2.1.1",
     "react-twitter-embed": "^3.0.3",
+    "react-youtube": "^7.13.0",
     "tailwindcss": "^2.0.2",
     "typeface-merriweather": "0.0.72",
     "typeface-montserrat": "0.0.75"
