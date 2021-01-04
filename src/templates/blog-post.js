@@ -10,7 +10,7 @@ import SEO from "../components/seo"
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.mdx
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  const siteURL = data.site.siteMetadata.siteUrl + post.slug
+  const siteURL = data.site.siteMetadata.siteUrl + post.fields.slug
   const { previous, next } = data
 
   const disqusConfig = {
@@ -54,14 +54,14 @@ const BlogPostTemplate = ({ data, location }) => {
         >
           <li>
             {previous && (
-              <Link to={previous.slug} rel="prev">
+              <Link to={previous.fields.slug} rel="prev">
                 ← {previous.frontmatter.title}
               </Link>
             )}
           </li>
           <li>
             {next && (
-              <Link to={next.slug} rel="next">
+              <Link to={next.fields.slug} rel="next">
                 {next.frontmatter.title} →
               </Link>
             )}
@@ -96,21 +96,25 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         description
       }
-      slug
       fields {
         readingTime {
           text
         }
+        slug
       }
     }
     previous: mdx(id: { eq: $previousPostId }) {
-      slug
+      fields {
+        slug
+      }
       frontmatter {
         title
       }
     }
     next: mdx(id: { eq: $nextPostId }) {
-      slug
+      fields {
+        slug
+      }
       frontmatter {
         title
       }
