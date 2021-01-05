@@ -1,11 +1,29 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
 import { Disqus } from "gatsby-plugin-disqus"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+
+// Global MDX components
+import { InlineMath } from "react-katex"
+import YouTube from "./../components/YouTube"
+import Gist from "react-gist"
+import Tweet from "./../components/Tweet"
+import Math from "./../components/Math"
+
+const globalMDXComponents = {
+  MDXProvider,
+  MDXRenderer,
+  InlineMath,
+  YouTube,
+  Tweet,
+  Math,
+  Gist,
+}
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.mdx
@@ -36,7 +54,9 @@ const BlogPostTemplate = ({ data, location }) => {
             {post.frontmatter.date} - {post.fields.readingTime.text}
           </p>
         </header>
-        <MDXRenderer>{post.body}</MDXRenderer>
+        <MDXProvider components={globalMDXComponents}>
+          <MDXRenderer>{post.body}</MDXRenderer>
+        </MDXProvider>
         <hr />
         <footer>
           <Bio />
