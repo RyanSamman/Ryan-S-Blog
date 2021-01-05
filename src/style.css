@@ -319,6 +319,10 @@ a:focus {
   margin-bottom: var(--spacing-8);
 }
 
+.gatsby-highlight pre {
+  border-radius: 0.25rem;
+}
+
 /* Media queries */
 
 @media (max-width: 42rem) {
