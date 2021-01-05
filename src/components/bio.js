@@ -42,10 +42,10 @@ const Bio = () => {
   // const avatar = data?.avatar?.childImageSharp?.fixed
 
   return (
-    <div class="md:flex bg-gray-100 justify-items-center rounded-xl p-8 md:p-0">
+    <div className="md:flex bg-gray-100 justify-items-center rounded-xl p-8 md:p-0">
       <div className="md:my-auto">
         <img
-          class="block w-32 h-32 rounded-full mx-auto md:mx-2"
+          className="block w-32 h-32 rounded-full mx-auto md:mx-2"
           src="https://pbs.twimg.com/profile_images/1311819690528903168/GH9oF9U8_400x400.jpg"
           alt=""
           width="384"
@@ -66,16 +66,16 @@ const Bio = () => {
           </a>
         </div>
       </div>
-      <div class="pt-6 md:p-8 text-center md:text-left space-y-4">
-        <p class="text-lg font-semibold">
+      <div className="pt-6 md:p-8 text-center md:text-left space-y-4">
+        <p className="text-lg font-semibold">
           Currently a freshman student in FCIT, I created this blog to document
           my programming journey and the projects I create. My strengths are in
           Python and Javascript, however, I plan on diving deeper into Computer
           Science in the coming years.
         </p>
-        <figcaption class="font-medium">
-          <div class="text-cyan-600">Ryan Samman</div>
-          <div class="text-gray-500">Computer Science Student, FCIT</div>
+        <figcaption className="font-medium">
+          <div className="text-cyan-600">Ryan Samman</div>
+          <div className="text-gray-500">Computer Science Student, FCIT</div>
         </figcaption>
       </div>
     </div>
