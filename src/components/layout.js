@@ -16,7 +16,7 @@ const Layout = ({ children }) => {
         className="global-wrapper rounded-2xl shadow-inner"
         style={{
           marginBottom: -50,
-          backgroundColor: "rgba(255,255,255,0.98)",
+          backgroundColor: "#FFF",
           border: "4px solid #000",
         }}
       >
