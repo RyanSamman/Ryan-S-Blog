@@ -11,3 +11,6 @@ import "prismjs/themes/prism-tomorrow.css"
 
 // Tailwind & Global CSS
 import "./src/styles/global.css"
+
+// KaTeX
+import "katex/dist/katex.min.css"
