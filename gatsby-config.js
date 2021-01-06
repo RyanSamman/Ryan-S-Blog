@@ -72,7 +72,7 @@ module.exports = {
         background_color: `#00457C`,
         theme_color: `#009CDE`,
         display: `minimal-ui`,
-        icon: `content/assets/icon.png`,
+        // icon: `content/assets/icon.png`,
         icons: [
           {
             src: "static/images/icons/icon-72x72.png",
