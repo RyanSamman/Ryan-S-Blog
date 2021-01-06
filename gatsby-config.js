@@ -180,7 +180,7 @@ module.exports = {
             },
             {
               urlPattern: /.*/,
-              handler: `NetworkFirst`,
+              handler: `CacheFirst`,
               options: {
                 networkTimeoutSeconds: 1,
               },
