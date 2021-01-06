@@ -181,9 +181,6 @@ module.exports = {
             {
               urlPattern: /.*/,
               handler: `CacheFirst`,
-              options: {
-                networkTimeoutSeconds: 1,
-              },
             },
           ],
         },
