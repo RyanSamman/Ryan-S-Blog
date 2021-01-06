@@ -5,8 +5,8 @@ module.exports = {
       name: `Ryan Samman`,
       summary: `studying Computer Science at the Faculty of Computing and Information Technology.`,
     },
-    description: `Ryan Samman's Personal Blog! I talk about how I've learnt `,
-    siteUrl: `https://ryan-samman.vercel.app/`,
+    description: `Ryan Samman's Personal Blog! `,
+    siteUrl: `https://ryansamman.com/`,
     social: {
       twitter: `Ryan_Samman_`,
       github: `RyanSamman`,
