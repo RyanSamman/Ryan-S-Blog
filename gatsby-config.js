@@ -146,6 +146,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-postcss`,
+    `gatsby-plugin-well-known`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     {
       resolve: `gatsby-plugin-offline`,

@@ -1,0 +1,5 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target" : { "namespace": "android_app", "package_name": "com.ryansamman.twa",
+                   "sha256_cert_fingerprints": ["CC:59:95:97:76:9E:2F:FB:D8:71:8F:9A:BC:4A:01:89:15:75:C8:46:49:23:9F:2A:F7:3D:02:D2:C0:38:DD:04"] }
+    }]
