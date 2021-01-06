@@ -130,7 +130,7 @@ module.exports = {
         start_url: `/`,
         background_color: `#00457C`,
         theme_color: `#009CDE`,
-        display: `minimal-ui`,
+        display: `standalone`,
         icon: `content/assets/icon.png`,
         icons: [
           {
