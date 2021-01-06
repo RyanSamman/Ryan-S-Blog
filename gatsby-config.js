@@ -32,7 +32,7 @@ module.exports = {
       options: {
         extentions: [`.mdx`, `.md`],
         defaultLayouts: {
-          blog: require.resolve("./src/templates/blog-post.js"),
+          blog: require.resolve("./src/templates/blog-post.jsx"),
         },
         gatsbyRemarkPlugins: [
           {
