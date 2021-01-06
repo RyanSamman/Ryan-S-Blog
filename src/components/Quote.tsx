@@ -19,7 +19,7 @@ const Quote: FC<QuotePropTypes> = ({ name, title, quote, social = {}, children }
 				</div>
 				<div className="my-1">
 					{Object.entries(social).map(([t, l]) => (
-						<Icon className="mx-1" key={t} type={t} link={l} />)
+						<Icon className="mr-1" key={t} type={t} link={l} />)
 					)}
 				</div>
 			</figcaption>
