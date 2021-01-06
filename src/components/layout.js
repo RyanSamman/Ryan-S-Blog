@@ -22,8 +22,9 @@ const Layout = ({ children }) => {
       >
         <main>{children}</main>
       </div>
-
-      <BottomWave />
+      <div style={{ width: "100%", overflow: "hidden" }}>
+        <BottomWave />
+      </div>
     </>
   )
 }
