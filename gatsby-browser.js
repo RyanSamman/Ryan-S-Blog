@@ -1,14 +1,3 @@
-export const onServiceWorkerUpdateReady = () => {
-  const answer = window.confirm(
-    `This application has been updated. ` +
-      `Reload to display the latest version?`
-  )
-
-  if (answer === true) {
-    window.location.reload()
-  }
-}
-
 // custom typefaces
 import "typeface-montserrat"
 import "typeface-merriweather"
@@ -25,3 +14,14 @@ import "./src/styles/global.css"
 
 // KaTeX
 import "katex/dist/katex.min.css"
+
+export const onServiceWorkerUpdateReady = () => {
+  const answer = window.confirm(
+    `This application has been updated. ` +
+      `Reload to display the latest version?`
+  )
+
+  if (answer === true) {
+    window.location.reload()
+  }
+}
