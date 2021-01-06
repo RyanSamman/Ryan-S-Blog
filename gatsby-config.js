@@ -140,6 +140,13 @@ module.exports = {
         workboxConfig: {
           runtimeCaching: [
             {
+              urlPattern: /blog/,
+              handler: `NetworkFirst`,
+              options: {
+                networkTimeoutSeconds: 1,
+              },
+            },
+            {
               urlPattern: /(\.js$|\.css$|static\/)/,
               handler: `CacheFirst`,
             },
@@ -159,7 +166,7 @@ module.exports = {
               handler: `StaleWhileRevalidate`,
             },
             {
-              urlPattern: /\/$/,
+              urlPattern: /.*/,
               handler: `NetworkFirst`,
               options: {
                 networkTimeoutSeconds: 1,
