@@ -14,6 +14,7 @@ import YouTube from "./../components/YouTube"
 import Gist from "react-gist"
 import Tweet from "./../components/Tweet"
 import Math from "./../components/Math"
+import Quote from './../components/Quote'
 
 const globalMDXComponents = {
   MDXProvider,
@@ -23,6 +24,7 @@ const globalMDXComponents = {
   Tweet,
   Math,
   Gist,
+  Quote,
 }
 
 const BlogPostTemplate = ({ data, location }) => {
