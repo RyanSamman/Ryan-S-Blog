@@ -1,6 +1,6 @@
 import React from "react"
 
-import NavBar from "./../components/NavBar"
+import NavBar from "./NavBar"
 
 import TopWave from "./../../content/assets/topwave.svg"
 import BottomWave from "./../../content/assets/bottomwave.svg"
