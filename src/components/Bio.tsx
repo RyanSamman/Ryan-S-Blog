@@ -62,7 +62,10 @@ const Bio = () => {
         <figcaption className="font-medium">
           <div className="text-blue-800">Ryan Samman</div>
           <div className="text-gray-500">Computer Science Student, FCIT</div>
-          <div style={{ width: "fit-content" }} className="mx-auto md:mx-0 mt-2">
+          <div
+            style={{ width: "fit-content" }}
+            className="mx-auto md:mx-0 mt-2"
+          >
             <a
               href={`https://twitter.com/${social?.twitter || ``}`}
               className="mr-1"

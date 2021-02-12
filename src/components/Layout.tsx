@@ -13,16 +13,15 @@ const Layout = ({ children }) => {
         <NavBar />
       </header>
       <div
-        className="global-wrapper rounded-2xl shadow-inner"
+        className="global-wrapper rounded-2xl shadow-inner mb-2"
         style={{
-          marginBottom: -50,
           backgroundColor: "#FFF",
           border: "4px solid #000",
         }}
       >
         <main>{children}</main>
       </div>
-      <div style={{ width: "100%", overflow: "hidden" }}>
+      <div style={{ width: "100%", overflow: "hidden", position: "relative", zIndex: -1 }}>
         <BottomWave />
       </div>
     </>

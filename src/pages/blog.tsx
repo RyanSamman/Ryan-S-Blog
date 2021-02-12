@@ -1,19 +1,18 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import { TwitterTweetEmbed } from "react-twitter-embed"
-import Skeleton from "react-loading-skeleton"
+import { Frontmatter, Mdx, Site } from './../../graphql-types'
 
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Bio from "../components/Bio"
+import Layout from "../components/Layout"
+import SEO from "../components/SEO"
+import Tweet from './../components/Tweet'
 
-const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `Title`
+const BlogIndex = ({ data }: BlogProps) => {
   const posts = data.allMdx.nodes
 
   return (
     <>
-      <Layout location={location} title={siteTitle}>
+      <Layout>
         <SEO title="My Blog Posts" />
         <h1 className="mt-0">My Blog Posts</h1>
         <ol style={{ listStyle: `none` }}>
@@ -33,7 +32,7 @@ const BlogIndex = ({ data, location }) => {
                         <span itemProp="headline">{title}</span>
                       </Link>
                     </h2>
-                    <small>{post.frontmatter.date}</small>
+                    <small>{post.frontmatter?.date}</small>
                   </header>
                   <section>
                     <p
@@ -49,12 +48,7 @@ const BlogIndex = ({ data, location }) => {
           })}
         </ol>
         <h4>More blog posts planned in the future!</h4>
-        <center>
-          <TwitterTweetEmbed
-            tweetId="1335155439122718726"
-            placeholder={<Skeleton height={500} />}
-          />
-        </center>
+        <Tweet id="1335155439122718726" />
         <Bio />
       </Layout>
     </>
@@ -62,6 +56,23 @@ const BlogIndex = ({ data, location }) => {
 }
 
 export default BlogIndex
+
+type MdxQuery = Mdx & {
+  frontmatter: Frontmatter,
+  fields: {
+    slug: string
+  }
+}
+
+type BlogProps = {
+  data: {
+    frontmatter: Frontmatter
+    site: Site
+    allMdx: {
+      nodes: MdxQuery[]
+    }
+  }
+}
 
 export const pageQuery = graphql`
   query {
