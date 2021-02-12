@@ -1,3 +1,4 @@
+// @ts-nocheck
 module.exports = {
   siteMetadata: {
     title: `Ryan Samman`,
@@ -32,7 +33,7 @@ module.exports = {
       options: {
         extentions: [`.mdx`, `.md`],
         defaultLayouts: {
-          blog: require.resolve("./src/templates/blog-post.jsx"),
+          blog: require.resolve("./src/templates/BlogPost.tsx"),
         },
         gatsbyRemarkPlugins: [
           {
@@ -206,6 +207,9 @@ module.exports = {
     },
     `gatsby-plugin-postcss`,
     `gatsby-plugin-well-known`,
+    `gatsby-plugin-typescript`,
+    `gatsby-plugin-tslint`,
+    `gatsby-plugin-graphql-codegen`, 
     // this (optional) plugin enables Progressive Web App + Offline functionality
     {
       resolve: `gatsby-plugin-offline`,

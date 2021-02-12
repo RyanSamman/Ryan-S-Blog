@@ -1,20 +1,22 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import { Mdx, Site, Frontmatter, ReadingTime } from './../../graphql-types'
+
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
 import { Disqus } from "gatsby-plugin-disqus"
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Bio from "../components/Bio"
+import Layout from "../components/Layout"
+import SEO from "../components/SEO"
 
 // Global MDX components
 import { InlineMath } from "react-katex"
-import YouTube from "./../components/YouTube"
+import YouTube from "../components/YouTube"
 import Gist from "react-gist"
-import Tweet from "./../components/Tweet"
-import Math from "./../components/Math"
-import Quote from './../components/Quote'
+import Tweet from "../components/Tweet"
+import Math from "../components/Math"
+import Quote from "../components/Quote"
 
 const globalMDXComponents = {
   MDXProvider,
@@ -27,10 +29,10 @@ const globalMDXComponents = {
   Quote,
 }
 
-const BlogPostTemplate = ({ data, location }) => {
+const BlogPostTemplate = ({ data }: BlogPostProps) => {
   const post = data.mdx
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  const siteURL = data.site.siteMetadata.siteUrl + post.fields.slug
+  const siteURL = data.site.siteMetadata?.siteUrl! + post.fields?.slug!
   const { previous, next } = data
 
   const disqusConfig = {
@@ -40,9 +42,9 @@ const BlogPostTemplate = ({ data, location }) => {
   }
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout>
       <SEO
-        title={post.frontmatter.title}
+        title={post.frontmatter.title!}
         description={post.frontmatter.description || post.excerpt}
       />
       <article
@@ -96,6 +98,23 @@ const BlogPostTemplate = ({ data, location }) => {
 }
 
 export default BlogPostTemplate
+
+type MdxQuery = Mdx & {
+  frontmatter: Frontmatter,
+  fields: {
+    slug: string,
+    readingTime: ReadingTime
+  }
+}
+
+type BlogPostProps = {
+  data: {
+    mdx: MdxQuery
+    site: Site
+    previous: MdxQuery
+    next: MdxQuery
+  }
+}
 
 export const pageQuery = graphql`
   query BlogPostBySlug(
