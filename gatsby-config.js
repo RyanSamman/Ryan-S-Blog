@@ -17,8 +17,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/blog`,
-        name: `blog`,
+        path: `${__dirname}/content`,
+        name: `content`,
       },
     },
     {
@@ -86,31 +86,32 @@ module.exports = {
                   description: edge.node.excerpt,
                   date: edge.node.frontmatter.date,
                   url:
-                    site.siteMetadata.siteUrl + "/blog" + edge.node.fields.slug,
+                    site.siteMetadata.siteUrl + edge.node.fields.slug,
                   guid:
-                    site.siteMetadata.siteUrl + "/blog" + edge.node.fields.slug,
+                    site.siteMetadata.siteUrl + edge.node.fields.slug,
                   custom_elements: [{ "content:encoded": edge.node.html }],
                 })
               })
             },
             query: `
-              {
-                allMdx(
-                  sort: { order: DESC, fields: [frontmatter___date] },
-                ) {
-                  edges {
-                    node {
-                      excerpt
-                      html
-                      fields { slug }
-                      frontmatter {
-                        title
-                        date
-                      }
+            {
+              allMdx(sort: {order: DESC, fields: [frontmatter___date]}, filter: {slug: {regex: "^/blog/"}}) {
+                edges {
+                  node {
+                    excerpt
+                    html
+                    fields {
+                      slug
+                    }
+                    frontmatter {
+                      title
+                      date
                     }
                   }
                 }
               }
+            }
+            
             `,
             output: "/rss.xml",
             title: "RSS Feed for Ryan's Blog",
@@ -209,7 +210,7 @@ module.exports = {
     `gatsby-plugin-well-known`,
     `gatsby-plugin-typescript`,
     `gatsby-plugin-tslint`,
-    `gatsby-plugin-graphql-codegen`, 
+    `gatsby-plugin-graphql-codegen`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     {
       resolve: `gatsby-plugin-offline`,
