@@ -8,46 +8,46 @@ import LinkedInIcon from "./../../content/assets/linkedin.svg"
 import UnknownIcon from "./../../content/assets/unknown.svg"
 
 const Icon: FC<IconTypes> = ({ className = "", type, link }) => {
-	let ChosenIcon: any
+    let ChosenIcon: any
 
-	switch (type) {
-		case "github":
-			ChosenIcon = GitHubIcon
-			break
-		case "twitter":
-			ChosenIcon = TwitterIcon
-			break
-		case "telegram":
-			ChosenIcon = TelegramIcon
-			break
-		case "website":
-			ChosenIcon = WebsiteIcon
-			break
-		case "linkedin":
-			ChosenIcon = LinkedInIcon
-			break
-		default:
-			ChosenIcon = UnknownIcon
-			break
-	}
+    switch (type) {
+        case "github":
+            ChosenIcon = GitHubIcon
+            break
+        case "twitter":
+            ChosenIcon = TwitterIcon
+            break
+        case "telegram":
+            ChosenIcon = TelegramIcon
+            break
+        case "website":
+            ChosenIcon = WebsiteIcon
+            break
+        case "linkedin":
+            ChosenIcon = LinkedInIcon
+            break
+        default:
+            ChosenIcon = UnknownIcon
+            break
+    }
 
-	return (
-		<a
-			className={className}
-			key={type}
-			href={link}
-			rel="noreferrer"
-			target="_blank"
-		>
-			<ChosenIcon />
-		</a>
-	)
+    return (
+        <a
+            className={className}
+            key={type}
+            href={link}
+            rel="noreferrer"
+            target="_blank"
+        >
+            <ChosenIcon />
+        </a>
+    )
 }
 
 type IconTypes = {
-	className?: string
-	type: "github" | "twitter" | "telegram" | "website" | "linkedin"
-	link: string
+    className?: string
+    type: "github" | "twitter" | "telegram" | "website" | "linkedin"
+    link: string
 }
 
 export type { IconTypes }
