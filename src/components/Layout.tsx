@@ -1,4 +1,4 @@
-import React from "react"
+import React, { Props } from "react"
 
 import NavBar from "./NavBar"
 
