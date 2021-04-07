@@ -33,14 +33,6 @@ const Quote: FC<QuotePropTypes> = ({
   </div>
 )
 
-type Social = {
-  github?: string
-  twitter?: string
-  linkedin?: string
-  website?: string
-  telegram?: string
-}
-
 type QuotePropTypes = {
   name: string
   title: string
