@@ -9,6 +9,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import GitHubIcon from "./../../content/assets/github.svg"
 import TwitterIcon from "./../../content/assets/twitter.svg"
+import SocialIcons from "./SocialIcons"
 
 const Bio = () => {
     const data = useStaticQuery(graphql`
@@ -66,18 +67,13 @@ const Bio = () => {
                         style={{ width: "fit-content" }}
                         className="mx-auto md:mx-0 mt-2"
                     >
-                        <a
-                            href={`https://twitter.com/${social?.twitter || ``}`}
-                            className="mr-1"
-                        >
-                            <TwitterIcon />
-                        </a>
-                        <a
-                            href={`https://github.com/${social?.github || ``}`}
-                            className="mr-1"
-                        >
-                            <GitHubIcon />
-                        </a>
+            <SocialIcons social={{
+              twitter: "https://twitter.com/Ryan_Samman_",
+              github: "https://github.com/RyanSamman",
+              website: "https://ryansamman.com/",
+              linkedin: "https://www.linkedin.com/in/Ryan-Samman/",
+              telegram: "https://t.me/RyanSamman",
+            }} />
                     </div>
                 </figcaption>
             </div>
