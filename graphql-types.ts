@@ -2254,8 +2254,6 @@ export type QuerySiteArgs = {
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>;
   port?: Maybe<IntQueryOperatorInput>;
   host?: Maybe<StringQueryOperatorInput>;
-  polyfill?: Maybe<BooleanQueryOperatorInput>;
-  pathPrefix?: Maybe<StringQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
   parent?: Maybe<NodeFilterInput>;
   children?: Maybe<NodeFilterListInput>;
@@ -2420,8 +2418,6 @@ export type Site = Node & {
   siteMetadata?: Maybe<SiteSiteMetadata>;
   port?: Maybe<Scalars['Int']>;
   host?: Maybe<Scalars['String']>;
-  polyfill?: Maybe<Scalars['Boolean']>;
-  pathPrefix?: Maybe<Scalars['String']>;
   id: Scalars['ID'];
   parent?: Maybe<Node>;
   children: Array<Node>;
@@ -2628,8 +2624,6 @@ export type SiteFieldsEnum =
   | 'siteMetadata___social___github'
   | 'port'
   | 'host'
-  | 'polyfill'
-  | 'pathPrefix'
   | 'id'
   | 'parent___id'
   | 'parent___parent___id'
@@ -2722,8 +2716,6 @@ export type SiteFilterInput = {
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>;
   port?: Maybe<IntQueryOperatorInput>;
   host?: Maybe<StringQueryOperatorInput>;
-  polyfill?: Maybe<BooleanQueryOperatorInput>;
-  pathPrefix?: Maybe<StringQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
   parent?: Maybe<NodeFilterInput>;
   children?: Maybe<NodeFilterListInput>;
@@ -2932,6 +2924,8 @@ export type SitePageFieldsEnum =
   | 'pluginCreator___resolve'
   | 'pluginCreator___name'
   | 'pluginCreator___version'
+  | 'pluginCreator___pluginOptions___fonts'
+  | 'pluginCreator___pluginOptions___display'
   | 'pluginCreator___pluginOptions___path'
   | 'pluginCreator___pluginOptions___name'
   | 'pluginCreator___pluginOptions___extentions'
@@ -2957,7 +2951,6 @@ export type SitePageFieldsEnum =
   | 'pluginCreator___pluginOptions___start_url'
   | 'pluginCreator___pluginOptions___background_color'
   | 'pluginCreator___pluginOptions___theme_color'
-  | 'pluginCreator___pluginOptions___display'
   | 'pluginCreator___pluginOptions___icon'
   | 'pluginCreator___pluginOptions___icons'
   | 'pluginCreator___pluginOptions___icons___src'
@@ -3163,6 +3156,8 @@ export type SitePluginFieldsEnum =
   | 'resolve'
   | 'name'
   | 'version'
+  | 'pluginOptions___fonts'
+  | 'pluginOptions___display'
   | 'pluginOptions___path'
   | 'pluginOptions___name'
   | 'pluginOptions___extentions'
@@ -3190,7 +3185,6 @@ export type SitePluginFieldsEnum =
   | 'pluginOptions___start_url'
   | 'pluginOptions___background_color'
   | 'pluginOptions___theme_color'
-  | 'pluginOptions___display'
   | 'pluginOptions___icon'
   | 'pluginOptions___icons'
   | 'pluginOptions___icons___src'
@@ -3325,6 +3319,8 @@ export type SitePluginPackageJsonPeerDependenciesFilterListInput = {
 };
 
 export type SitePluginPluginOptions = {
+  fonts?: Maybe<Array<Maybe<Scalars['String']>>>;
+  display?: Maybe<Scalars['String']>;
   path?: Maybe<Scalars['String']>;
   name?: Maybe<Scalars['String']>;
   extentions?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -3345,7 +3341,6 @@ export type SitePluginPluginOptions = {
   start_url?: Maybe<Scalars['String']>;
   background_color?: Maybe<Scalars['String']>;
   theme_color?: Maybe<Scalars['String']>;
-  display?: Maybe<Scalars['String']>;
   icon?: Maybe<Scalars['String']>;
   icons?: Maybe<Array<Maybe<SitePluginPluginOptionsIcons>>>;
   legacy?: Maybe<Scalars['Boolean']>;
@@ -3389,6 +3384,8 @@ export type SitePluginPluginOptionsFeedsFilterListInput = {
 };
 
 export type SitePluginPluginOptionsFilterInput = {
+  fonts?: Maybe<StringQueryOperatorInput>;
+  display?: Maybe<StringQueryOperatorInput>;
   path?: Maybe<StringQueryOperatorInput>;
   name?: Maybe<StringQueryOperatorInput>;
   extentions?: Maybe<StringQueryOperatorInput>;
@@ -3409,7 +3406,6 @@ export type SitePluginPluginOptionsFilterInput = {
   start_url?: Maybe<StringQueryOperatorInput>;
   background_color?: Maybe<StringQueryOperatorInput>;
   theme_color?: Maybe<StringQueryOperatorInput>;
-  display?: Maybe<StringQueryOperatorInput>;
   icon?: Maybe<StringQueryOperatorInput>;
   icons?: Maybe<SitePluginPluginOptionsIconsFilterListInput>;
   legacy?: Maybe<BooleanQueryOperatorInput>;
