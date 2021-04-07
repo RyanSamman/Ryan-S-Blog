@@ -5,9 +5,9 @@
         margin: auto;
         display: float;
         z-index: -1;
-        position: absolute;
-        top: 0;
-        left: 0;
+        position: fixed;
+        bottom: 0;
+        right: 0;
         overflow: hidden;
       "
       width="100%"

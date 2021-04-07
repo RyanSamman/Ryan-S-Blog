@@ -1,4 +1,13 @@
-<svg fill="none" style="display: block; z-index: -1;" width="100%" preserveAspectRatio="xMidYMid"
+<svg 
+  fill="none" 
+  style="
+    display: block; 
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: -1;" 
+  width="100%" 
+  preserveAspectRatio="xMidYMid"
   viewBox="0 0 1152 200">
   <path fill="#000" d="
           M0 100
@@ -61,6 +70,16 @@
             H 0 
             V 67
             Z
+
+            M0 77 
+            C 473,283
+              300,-40
+              1152,116 
+
+            V 359 
+            H 0 
+            V 67 
+            Z; 
             "></animate>
   </path>
 </svg>

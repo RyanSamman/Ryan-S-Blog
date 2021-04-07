@@ -1,11 +1,15 @@
-import React, { Props } from "react"
+import React from "react"
 
 import NavBar from "./NavBar"
 
 import TopWave from "./../../content/assets/topwave.svg"
 import BottomWave from "./../../content/assets/bottomwave.svg"
 
-const Layout = ({ children }) => {
+interface LayoutPropTypes {
+  children: React.ReactNode 
+}
+
+function Layout({ children }: LayoutPropTypes) {
   return (
     <>
       <TopWave />
@@ -13,7 +17,7 @@ const Layout = ({ children }) => {
         <NavBar />
       </header>
       <div
-        className="global-wrapper rounded-2xl shadow-inner mb-2"
+        className="global-wrapper rounded-2xl shadow-inner mb-20"
         style={{
           backgroundColor: "#FFF",
           border: "4px solid #000",
@@ -21,9 +25,7 @@ const Layout = ({ children }) => {
       >
         <main>{children}</main>
       </div>
-      <div style={{ width: "100%", overflow: "hidden", position: "relative", zIndex: -1 }}>
-        <BottomWave />
-      </div>
+      <BottomWave />
     </>
   )
 }
