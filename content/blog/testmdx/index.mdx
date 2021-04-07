@@ -47,12 +47,12 @@ Inline Code `testing`
 ```js
 // JavaScript
 function diamond(n) {
-	if (n < 0 || n % 2 == 0) return ""
+    if (n < 0 || n % 2 == 0) return ""
     const midpoint = (n - 1) / 2
     const spaces = x => Math.abs(x - midpoint)
     const filled = x => n - 2 * Math.abs(x-midpoint)
     const layer = l => " ".repeat(spaces(l)) + "*".repeat(filled(l)) + "\n"
-	return [ ...Array(n).keys()].reduce((d, l) => d + layer(l), "")
+    return [ ...Array(n).keys()].reduce((d, l) => d + layer(l), "")
 }
 
 print(diamond(11))
@@ -61,13 +61,13 @@ print(diamond(11))
 ```py
 # Python
 def diamond(n):
-	if n < 0 or n % 2 == 0:
-		return ""
-	midpoint = (n - 1) // 2
-	spaces = lambda x: abs(x - midpoint)
-	filled = lambda x: n - 2 * abs(x-midpoint)
-	layer = lambda l: " " * spaces(l) + "*" * filled(l) + "\n"
-	return "".join([layer(l) for l in range(n)])
+    if n < 0 or n % 2 == 0:
+        return ""
+    midpoint = (n - 1) // 2
+    spaces = lambda x: abs(x - midpoint)
+    filled = lambda x: n - 2 * abs(x-midpoint)
+    layer = lambda l: " " * spaces(l) + "*" * filled(l) + "\n"
+    return "".join([layer(l) for l in range(n)])
 
 
 print(diamond(11))
