@@ -4,8 +4,6 @@ import TwitterIcon from "./../../content/assets/twitter.svg"
 import SocialIcons from "./SocialIcons"
 
 const Bio = () => {
-
-
   return (
     <div className="md:flex bg-gray-100 justify-items-center rounded-xl p-8 md:p-0">
       <div className="md:my-auto md:ml-8 content-center">
@@ -37,6 +35,7 @@ const Bio = () => {
               website: "https://ryansamman.com/",
               linkedin: "https://www.linkedin.com/in/Ryan-Samman/",
               telegram: "https://t.me/RyanSamman",
+              youtube: "https://www.youtube.com/channel/UCGifqU_TZEzeqE6eMTjcs8w",
             }} />
           </div>
         </figcaption>
