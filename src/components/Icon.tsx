@@ -6,6 +6,7 @@ import TelegramIcon from "./../../content/assets/telegram.svg"
 import WebsiteIcon from "./../../content/assets/website.svg"
 import LinkedInIcon from "./../../content/assets/linkedin.svg"
 import UnknownIcon from "./../../content/assets/unknown.svg"
+import { Social } from "../types"
 
 const Icon: FC<IconTypes> = ({ className = "", type, link }) => {
     let ChosenIcon: any
@@ -46,7 +47,7 @@ const Icon: FC<IconTypes> = ({ className = "", type, link }) => {
 
 type IconTypes = {
     className?: string
-    type: "github" | "twitter" | "telegram" | "website" | "linkedin"
+    type: keyof Social
     link: string
 }
 
