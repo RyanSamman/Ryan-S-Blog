@@ -4,5 +4,5 @@ export type Social = {
   linkedin?: string
   website?: string
   telegram?: string
+  youtube?: string
 }
-
