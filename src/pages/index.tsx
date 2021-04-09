@@ -30,8 +30,6 @@ const BlogIndex = () => {
       </div>
 
       <BottomWave />
-      <div style={{ height: "300px", backgroundColor: "#000" }}></div>
-
     </div>
   )
 }

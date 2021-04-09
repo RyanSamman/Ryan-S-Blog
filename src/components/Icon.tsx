@@ -5,30 +5,24 @@ import TwitterIcon from "./../../content/assets/twitter.svg"
 import TelegramIcon from "./../../content/assets/telegram.svg"
 import WebsiteIcon from "./../../content/assets/website.svg"
 import LinkedInIcon from "./../../content/assets/linkedin.svg"
+import YoutubeIcon from "./../../content/assets/youtube.svg"
 import UnknownIcon from "./../../content/assets/unknown.svg"
+import { Social } from "../types"
 
 const Icon: FC<IconTypes> = ({ className = "", type, link }) => {
-    let ChosenIcon: any
+    let ChosenIcon = UnknownIcon
 
-    switch (type) {
-        case "github":
-            ChosenIcon = GitHubIcon
-            break
-        case "twitter":
-            ChosenIcon = TwitterIcon
-            break
-        case "telegram":
-            ChosenIcon = TelegramIcon
-            break
-        case "website":
-            ChosenIcon = WebsiteIcon
-            break
-        case "linkedin":
-            ChosenIcon = LinkedInIcon
-            break
-        default:
-            ChosenIcon = UnknownIcon
-            break
+    const iconMap = {
+        "github": GitHubIcon,
+        "twitter": TwitterIcon,
+        "telegram": TelegramIcon,
+        "website": WebsiteIcon,
+        "linkedin": LinkedInIcon,
+        "youtube": YoutubeIcon,
+    } as const
+
+    if (type in iconMap) {
+        ChosenIcon = iconMap[type]
     }
 
     return (
@@ -46,7 +40,7 @@ const Icon: FC<IconTypes> = ({ className = "", type, link }) => {
 
 type IconTypes = {
     className?: string
-    type: "github" | "twitter" | "telegram" | "website" | "linkedin"
+    type: keyof Social
     link: string
 }
 

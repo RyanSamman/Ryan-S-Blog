@@ -1,6 +1,10 @@
 import React from "react"
 
-const YouTube = ({ id }) => (
+interface YouTubeProps {
+  id: string
+}
+
+const YouTube = ({ id }: YouTubeProps) => (
   <div className="video-container">
     <iframe
       title={id}

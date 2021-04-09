@@ -1,5 +1,6 @@
 import React, { FC } from "react"
-import Icon from "./Icon"
+import { Social } from "../types"
+import SocialIcons from './../components/SocialIcons'
 
 const Quote: FC<QuotePropTypes> = ({
   name,
@@ -17,29 +18,12 @@ const Quote: FC<QuotePropTypes> = ({
         <div className="text-blue-800">{name}</div>
         <div className="text-gray-500">{title}</div>
         <div className="my-1">
-          {Object.entries(social).map(([t, l]) => {
-            return (
-              <Icon
-                className="mr-1"
-                key={t}
-                type={t as keyof Social}
-                link={l!}
-              />
-            )
-          })}
+          <SocialIcons social={social}/>
         </div>
       </figcaption>
     </div>
   </div>
 )
-
-type Social = {
-  github?: string
-  twitter?: string
-  linkedin?: string
-  website?: string
-  telegram?: string
-}
 
 type QuotePropTypes = {
   name: string
