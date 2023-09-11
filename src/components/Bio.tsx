@@ -17,14 +17,12 @@ const Bio = () => {
       </div>
       <div className="pt-4 md:p-8 text-center md:text-left space-y-4">
         <p className="text-lg font-semibold mb-4">
-          Currently a freshman student in FCIT, I created this blog to document
-          my programming journey and the projects I create. My strengths are in
-          Python and Typescript, however, I plan on diving deeper into Computer
-          Science in the coming years.
+          Currently a student at the University of Waterloo, I created this blog to document
+          my programming journey and the projects I create.
                 </p>
         <figcaption className="font-medium">
           <div className="text-blue-800">Ryan Samman</div>
-          <div className="text-gray-500">Computer Science Student, FCIT</div>
+          <div className="text-gray-500">Computer Science Student, UWaterloo</div>
           <div
             style={{ width: "fit-content" }}
             className="mx-auto md:mx-0 mt-2"
@@ -34,7 +32,6 @@ const Bio = () => {
               github: "https://github.com/RyanSamman",
               website: "https://ryansamman.com/",
               linkedin: "https://www.linkedin.com/in/Ryan-Samman/",
-              telegram: "https://t.me/RyanSamman",
               youtube: "https://www.youtube.com/channel/UCGifqU_TZEzeqE6eMTjcs8w",
             }} />
           </div>
